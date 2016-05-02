@@ -1,0 +1,22 @@
+<%= link_to '記録する', new_record_path %>
+<br>
+<%= link_to '関連付けを探す', assoc_path %>
+<br>
+
+<% if @records.present? %>
+  <br>
+  <table>
+    <tr>
+      <th> 内容
+      <th> メモ
+      <th> 関連事項
+      <th> 作成日時
+      <th> その他
+        <% @records.each do |record| %>
+      <tr>
+        <td><%= record.id %>
+        <td><%= record.content %>
+        <td><%= record.reference %>
+        <td><%= record.memo %>
+    <% end %>
+<% end %>

@@ -1,0 +1,9 @@
+<%= form_for(@record) do |f| %>
+  <%= f.label :content  %>
+  <%= f.text_field :content, size: 16 %>
+  <%= f.label :reference %>
+  <%= f.text_field :reference %>
+  <%= f.label :memo %>
+  <%= f.text_field :memo %>
+  <%= f.submit %>
+<% end %>
